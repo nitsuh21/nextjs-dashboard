@@ -215,3 +215,6 @@ export async function fetchFilteredCustomers(query: string) {
     throw new Error('Failed to fetch customer table.');
   }
 }
+
+export const invoiceCountPromise = sql`SELECT COUNT(*) FROM invoices`;
+export const customerCountPromise = sql`SELECT COUNT(*) FROM customers`;
